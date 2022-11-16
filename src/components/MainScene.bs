@@ -1,0 +1,23 @@
+sub init()
+    label = m.top.findNode("welcome")
+    label.text = "Hello world"
+
+    m.textColor = &h8A8A5Cff
+	m.bgColor = &hffffffff
+	m.linkColor = &h0000CCff
+
+		m.screen=createObject( "roScreen", false, 1280, 720 )
+
+
+	m.screenWidth = m.screen.getWidth()
+	m.screenHeight = m.screen.getHeight()
+	m.remainingHeight = .6 * m.screenHeight
+	m.remainingWidth = .8 * m.screenWidth
+
+	m.x = .1 * m.screenWidth
+	m.y = .2 * m.screenHeight
+	
+	m.adjustColors( m.textColor, m.bgColor )
+	m.adjustTextSize( 14 )
+end sub
+
